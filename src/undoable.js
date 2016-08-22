@@ -58,7 +58,7 @@ export default function(reducer, config) {
     future: []
   };
 
-  const mergedConfig = Object.assign(defaultConfig, config);
+  const mergedConfig = { ...defaultConfig, ...config };
 
   return function (state = initialState, action) {
     const { initial, past, present, future } = state;
