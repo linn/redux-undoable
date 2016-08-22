@@ -71,13 +71,15 @@ export default function(reducer, config) {
         future
       };
     }
-
+ 
     switch (action.type) {
-      case UNDO:
+      case UNDO: {
         return undo(initial, past, present, future, reducer);
-      case REDO:
+      }
+      case REDO: {
         return redo(initial, past, present, future, reducer);
-      default:
+      }
+      default: {
         const newPresent = reducer(present, action);
         if (present === newPresent) {
           return state;
@@ -98,6 +100,7 @@ export default function(reducer, config) {
           present: newPresent,
           future: []
         };
+      }
     }
   };
 }
