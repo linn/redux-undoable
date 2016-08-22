@@ -4,9 +4,10 @@
   "description": "A reducer enhancer (or higher order reducer) that provides undo/redo functionality for Redux by replaying actions (rather than storing previous state)",
   "main": "lib/undoable.js",
   "scripts": {
-    "build": "babel -d lib/ src/",
+    "build": "babel -d lib/ src/ --source-maps both",
     "prepublish": "npm run build",
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "istanbul cover _mocha"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
     "undoable"
   ],
   "author": {
-    "name":  "Jim Liddell",
+    "name": "Jim Liddell",
     "url": "http://liddellj.com"
   },
   "license": "ISC",
@@ -35,6 +36,8 @@
     "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.11.3",
     "chai": "^3.5.0",
+    "codecov.io": "^0.1.6",
+    "istanbul": "^1.1.0-alpha.1",
     "mocha": "^3.0.2"
   }
 }
