@@ -1,3 +1,4 @@
+const REDUX_INIT = '@@redux/INIT';
 export const UNDO = '@@redux-undoable/UNDO';
 export const REDO = '@@redux-undoable/REDO';
 export const REPLAY_FINISHED = '@@redux-undoable/REPLAY_FINISHED';
@@ -45,7 +46,7 @@ const redo = function(initial, past, present, future, reducer){
 };
 
 const defaultConfig = {
-  init: ['@@redux/INIT'],
+  init: [REDUX_INIT],
   include: []
 };
 
