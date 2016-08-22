@@ -1,5 +1,5 @@
-export const UNDO = 'UNDO';
-export const REDO = 'REDO';
+export const UNDO = '@@redux-undoable/UNDO';
+export const REDO = '@@redux-undoable/REDO';
 export const REPLAY_FINISHED = '@@redux-undoable/REPLAY_FINISHED';
 
 const replayFinished = () => {
